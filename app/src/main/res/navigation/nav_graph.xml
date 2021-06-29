@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentZero">
+    <fragment
+        android:id="@+id/fragmentZero"
+        android:name="com.example.jetpacknavigation.FragmentZero"
+        android:label="fragment_zero"
+        tools:layout="@layout/fragment_zero" >
+        <action
+            android:id="@+id/action_fragmentZero_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentZero_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.jetpacknavigation.FragmentOne"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentZero"
+            app:destination="@id/fragmentZero" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.jetpacknavigation.FragmentTwo"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentZero"
+            app:destination="@id/fragmentZero" />
+    </fragment>
+
+</navigation>
